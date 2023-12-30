@@ -4,7 +4,7 @@ Follow below steps to setup this repo on your local machine
 
 1. Open command promt on your local machine and run command 'git clone "https://github.com/RohanSingh07/InventoryManagementSystem.git"' to clone the repo.
 2. Step 1 will clone the project creating a folder called "InventoryManagementSystem".
-   ------- For windows -------
+   ------- For windows --------
 3. Inside the project folder create a virtual enviroment by running the command "virtualenv env", if you don't have virtualenv library installed, first install the library
     into the system by running "pip install virtualenv".
 4. Activate the virtual environment
