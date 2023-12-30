@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+          overflow-x:hidden;
+      }
+      input{
+        border: 4px solid #30b5be;
+        width: 25vw;
+        height: 5vh;
+      }
+      textarea{
+         border: 4px solid #30b5be;
+        width: 25vw;
+        height: 10vh;
+      }
+      small{
+          color: #d43737;
+    text-decoration: underline;
+    }
+    </style>
+    <title>ADD LISTING</title>
+</head>
+<body>
+    <div id="header">
+        <h1 style="color:wheat;">LIST OF ALL PRODUCTS IN INVENTORY</h1>
+    </div>
+    <div id="allProducts" style="align-items:center !important;">
+    {% for row in products %}
+        <div style="display:flex;flex-direction:row;display: flex;flex-direction: row; width: 100vw;justify-content: space-evenly;margin-top:1em;">
+            {% for product in row %}
+                <div class="product">
+                    <img src="{{product.image1_url}}" style="width:100%;height:30vh;">
+                    <div style="padding-left:0.5em;padding-top:1em;">
+                        <small>Name</small>
+                        <h2 style="color:white;font-size:1em;">{{product.Name}}</h2>
+                        <small>Price</small>
+                        <h2 style="color:white;font-size:1em;">{{product.price}}</h2>
+                        <small>Discount Price</small>
+                        <h2 style="color:white;font-size:1em;">{{product.discount_price}}</h2>
+                        <small>Brand</small>
+                        <h2 style="color:white;font-size:1em;">{{product.Brand}}</h2>
+                        <small>Description</small>
+                        <p style="color:white;font-size:1em;font-family:monospace;">{{product.description}}</p>
+                        <small>Color</small>
+                        <h2 style="color:white;font-size:1em;">{{product.color}}</h2>
+                        <small>Seller Name</small>
+                        <h2 style="color:white;font-size:1em;">{{product.SellerName}}</h2>
+                        <small>Stock</small>
+                        <h2 style="color:white;font-size:1em;">{{product.Stock}}</h2>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+
+</body>
+</html>

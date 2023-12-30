@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CPoint5 Inventory</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap JS -->
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+  <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+      }
+  </style>
+</head>
+<body>
+<!--  header-->
+    <div id="header">
+      <h1 style="color:wheat;">INVENTORY MANAGEMENT SYSTEM</h1>
+    </div>
+    {% if messages %}
+
+        {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} alert-dismissible "  style="position: fixed;top: 13vh;z-index: 2;width: 100%;opacity: 0.8;background-color: green;text-align: center;">
+                  {{ message }}
+                   <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="width:3vw;height:2em;">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+        {% endfor %}
+
+    {% endif %}
+<!--  instructions-->
+<!--  add product-->
+<!--  show all products-->
+<!--  footer-->
+    <div id="main_body" >
+      <h1 style="color: #d77834;">INSTRUCTIONS</h1>
+        <h2>Click the button below to add product to inventory</h2>
+        <a href="{% url 'inventory_management:addProduct' %}" ><button style="color: #971111;font-size: 0.85em;font-weight: bold;"> Add Product</button></a>
+        <h2>Click the button below to get all the products from inventory</h2>
+        <a href="{% url 'inventory_management:getAllProducts' %}"><button style="color: #971111;font-size: 0.85em;font-weight: bold;">Show all Products</button></a>
+    </div>
+
+
+</body>
+</html>

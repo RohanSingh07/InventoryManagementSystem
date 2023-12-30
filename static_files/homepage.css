@@ -1,0 +1,71 @@
+
+#header{
+    width: 100vw;
+    background-color: #F44336;
+    margin: 0;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+margin:0;
+}
+
+body{
+background:#e4daac;
+}
+#main_body{
+padding-top: 5vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+button{
+    width: 15vw;
+    height: 5vh;
+    background-color: #c6d667;
+ }
+
+a{
+ text-decoration:unset;
+}
+
+button:hover{
+ cursor:pointer;
+}
+h2{
+font-family:monospace;
+}
+
+#allProducts{
+    padding-top: 5vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width:100vw;
+}
+
+.product{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
+    width: 20vw;
+    height: 60vh;
+    background: #0e484a;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background: #888; /* Change color of the scrollbar thumb */
+}
+
+/* Style changes when hovering over the element */
+.product:hover {
+    transform: scale(1.05); /* Scale the element by 1.2 times on hover */
+}
